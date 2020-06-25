@@ -66,7 +66,7 @@ else:
                     # присваиваем значение "истина" флагу перехода к следующей итерации цикла поиска закрывающейся скобки
                     # и выходим из цикла перебора подстроки
                     if subStr[j] == target:
-                        inStr = subStr[0 : j] + inStr[(j+1) : i] + inStr[(i+1) : ]
+                        inStr = subStr[0 : j] + inStr[(j+1) : i] + inStr[(i+1) : ] 
                         bracketsCount -= 2                        
                         nextIter = True
                         break
@@ -74,14 +74,17 @@ else:
                     # значит в последовательности скобок ошибка, 
                     # присваиваем значение "ложь" флагу GO, чтобы выйти из самого верхнего цикла
                     elif subStr[j] in wrongOpenBrackets:
+                        alertStr = subStr[0 : j] + '!' + subStr[j] + '!' +  inStr[(j+1) : ]
                         print('Ошибка! Неправильная последовательность скобок')
+                        print(alertStr)
                         go = False
                         nextIter = True
                         break
                     #В любом другом случае просто продолжаем перебор подстроки
                     else:
                         continue                
-                
+
+            #print (inStr)
             if nextIter:
                 break
         
