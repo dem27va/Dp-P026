@@ -90,7 +90,7 @@ def drawRect(rectCoordSetsList, grossrectangle):
         grossXs.append(grossCoord[0])
         grossYs.append(grossCoord[1])
     
-    rectGross = patches.Rectangle((min(grossXs), min(grossYs)), max(grossXs) - min(grossXs), max(grossYs) - min(grossYs), linewidth = 2, edgecolor = 'red', facecolor = 'none')
+    rectGross = patches.Rectangle((min(grossXs), min(grossYs)), max(grossXs) - min(grossXs), max(grossYs) - min(grossYs), linewidth = 1, edgecolor = 'red', facecolor = 'none')
     ax.add_patch(rectGross)
 
     plt.xlim([-50, 50])
